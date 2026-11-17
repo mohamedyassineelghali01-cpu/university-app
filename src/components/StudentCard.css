@@ -1,0 +1,68 @@
+
+
+#np{
+color: rgb(215, 53, 53);
+}
+#email{
+color: rgb(215, 53, 53);
+}
+#tel{
+color: rgb(215, 53, 53);
+}
+#fi{
+color: rgb(215, 53, 53);
+}
+#ae{
+color: rgb(215, 53, 53);
+}
+#g{
+color: rgb(215, 53, 53);
+}
+#v{
+color: rgb(215, 53, 53);
+}
+
+h1{
+  font-size: 2rem;
+  font-style: oblique;
+  font-weight: 4000;
+  color : rgb(0, 0, 0);
+  
+}
+.card {
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  text-align: center;
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.card button{
+  color: black;
+  background-color: rgb(67, 184, 197);
+  font-size: large;
+  font-style:oblique;
+  font-weight:bolder;
+  border-radius: 20%;
+  border-style:solid;
+  width: 150px;
+  height: 40px;
+  
+}
+
+.card button:hover { background: #3f74bd; }
+.card a{
+  color: blanchedalmond;
+  text-decoration: none;
+}
+
+

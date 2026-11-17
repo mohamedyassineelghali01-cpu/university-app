@@ -1,8 +1,14 @@
 import { useState } from 'react'
-import heroImg from './assets/pec.jpg'
-import './App.css'
+import "./App.css";
+import Header from "./components/Header.jsx";
+import Navbar from "./components/Navbar.jsx";
+import StudentCard from "./components/StudentCard.jsx";
+import Footer from "./components/Footer.jsx";
+import heroImg from './assets/pr.png';
 
-const etudiant = {
+
+const etudiant = [
+{
   nom : "Mohamed Yassine",
   prenom : "El ghali",
   Email : "mohamedyassineelghali01@gmail.com" ,
@@ -12,28 +18,69 @@ const etudiant = {
   Groupe : "GLSI2",
   Ville : "Mahdia",
   image: heroImg
-}
+},
+{
+    prenom: "Slim",
+    nom: "Boubaker",
+    Email: "slimboubaker@gmail.com",
+    Teléphone: "+216 99 999 999",
+    Filére: "Génie Logiciel et Systèmes d'Information",
+    Annéedetude : "2éme",
+    Groupe : "GLSI2",
+    Ville : "Mahdia",
+    image: heroImg
+  },
+  {
+    prenom: "Sarra",
+    nom: "Trabelsi",
+    Email: "sarra.trabelsi@gmail.com",
+    Teléphone: "+216 22 345 678",
+    Filére: "Génie Logiciel et Systèmes d'Information",
+    Annéedetude : "2éme",
+    Groupe : "GLSI2",
+    Ville : "sousse",
+    image: heroImg
+  },
+  {
+    prenom: "Mariem",
+    nom: "Khalfallah",
+    Email: "mariem.khalfallah@gmail.com",
+    Teléphone: "+216 27 567 890",
+    Filére: "Génie Logiciel et Systèmes d'Information",
+    Annéedetude : "2éme",
+    Groupe : "GLSII2",
+    Ville : "sousse",
+    image: heroImg
+  },
+]
+
 
 function App() {
-  
-  const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <h1>Fiche étudiant</h1> <br />
-      <img src={etudiant.image} alt="" />
-      <h3><span id='np'>Nom & prénom :</span> {etudiant.nom} {etudiant.prenom} </h3>
-      <h3><span id='email'>Email :</span>  {etudiant.Email} </h3>
-      <h3><span id='tel'>Teléphone :</span>  {etudiant.Teléphone}</h3>     
-      <h3><span id='fi'>Filére :</span> {etudiant.Filére} </h3>
-      <h3><span id='ae'>Année d'etude :</span> {etudiant.Annéedetude}</h3>
-      <h3><span id='g'>Groupe :</span>  {etudiant.Groupe}</h3>
-      <h3><span id='v'>Ville :</span> {etudiant.Ville} </h3>
-      <a href="mailto:mohamedyassineelghali01@gmail.com">
-        <button id='bt'>contune</button>
-      </a>
+    <div className="app">
+      <Header />
+      <Navbar />
+      <main className="container">
+        {etudiant.map((etudiant) => (
+          <StudentCard
+            prenom={etudiant.prenom}
+            nom={etudiant.nom}
+            Email={etudiant.Email}
+            Teléphone={etudiant.Teléphone}
+            Filére={etudiant.Filére}
+            Annéedetude={etudiant.Annéedetude}
+            Groupe={etudiant.Groupe}
+            Ville={etudiant.Ville}
+            image={etudiant.image}
+          />
+        ))}
+      </main>
+      <Footer />
     </div>
   )
 }
 
-export default App
+export default App;
+
+
